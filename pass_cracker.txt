@@ -1,0 +1,22 @@
+# passord crackker
+import time
+from random import *
+time1=time.time()
+user_pass=input('Enter your password:')
+password=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', '0',
+                'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+guess=''
+
+
+
+while(guess!=user_pass):
+    guess=''
+    for letter in range(len(user_pass)):
+        guess_letter=password[randint(0,25)]
+        print(guess_letter)
+        guess=str(guess_letter)+str(guess)
+        print(guess)
+time2=time.time()
+print("your password is ", guess)
+print(time2-time1)
